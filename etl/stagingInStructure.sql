@@ -1,13 +1,13 @@
 -- Create Structure for receiving the extracted elements from data source (Sakila)
 -- Only the needed register for answering the proposed questions are considered for the new structure
     
--- Tabla Country 1
+-- Table Country 1
 CREATE TABLE IF NOT EXISTS staging.Country(
     country_id SMALLINT PRIMARY KEY,
     country VARCHAR(50)
 );
 
--- Tabla City 2
+-- Table City 2
 CREATE TABLE IF NOT EXISTS staging.City(
     city_id SMALLINT PRIMARY KEY,
     city VARCHAR(50),
@@ -45,13 +45,13 @@ CREATE TABLE IF NOT EXISTS staging.Customer(
     FOREIGN KEY  (store_id) REFERENCES staging.Store (store_id)
 );
 
--- staging in Lenguage 13
+-- Table Lenguage 13
 CREATE TABLE IF NOT EXISTS staging.Language (
     language_id TINYINT PRIMARY KEY,
     name CHAR(20)
 );
 
--- staging in Film 6
+-- Table Film 6
 CREATE TABLE IF NOT EXISTS staging.Film (
     film_id SMALLINT PRIMARY KEY,
     title VARCHAR(255),
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS staging.Category (
     name VARCHAR(25)
 );
 
--- staging in Film_category 8
+-- Table Film_category 8
 CREATE TABLE IF NOT EXISTS staging.Film_category (
     film_id SMALLINT,
     category_id TINYINT,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS staging.Actor (
     last_name VARCHAR(45)
 );
 
--- staging in Inventory 10
+-- Table Inventory 10
 CREATE TABLE IF NOT EXISTS staging.Inventory (
     inventory_id MEDIUMINT PRIMARY KEY, 
     store_id TINYINT,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS staging.Film_actor (
     
 );
 
--- staging in Rental 12
+-- Table Rental 12
 CREATE TABLE IF NOT EXISTS staging.Rental (
     rental_id INT PRIMARY KEY, 
     customer_id SMALLINT, 
